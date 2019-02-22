@@ -35,7 +35,6 @@ export default class Content extends React.Component {
         return true;
       }
       return false;
-  
     });
   };
 

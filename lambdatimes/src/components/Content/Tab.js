@@ -1,21 +1,27 @@
 import React from 'react';
+import PT from 'prop-types';
 
-const Tab = props => {
+
+const Tab = ({ tab, selectedTab, selectTabHandler}) => {
   let tabClass = ""
-  props.tab === props.selectedTab
+  tab === selectedTab
   ? tabClass = "tab active-tab"
   : tabClass = "tab";
       
   return (
     <div
       className={tabClass}
-      onClick={() => props.selectTabHandler(props.tab)}
+      onClick={() => selectTabHandler(tab)}
     >
-      {props.tab.toUpperCase()}
+      {tab.toUpperCase()}
     </div>
   );
 };
 
-// Make sure you include PropTypes on your props.
+Tab.propTypes = {
+  tab: PT.string.isRequired,
+  selectedTab: PT.string.isRequired,
+  selectTabHandler: PT.func.isRequired,
+}
 
 export default Tab;

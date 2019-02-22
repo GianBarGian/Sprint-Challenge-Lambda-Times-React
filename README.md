@@ -30,19 +30,23 @@ Look through the application code. If you have the old Lambda Times (Applied Jav
 
 - [ ] What are PropTypes used for? Please describe why it's important to type check our data in JavaScript.
 
-
+PropTypes are used to check if the props that are passed are of the type that is expected to come in.
+They are really important to help you write apps with less bugs that could be really hard to detect. 
+Let’s imagine that a props of a “wrong” type is passed, that could cause all kind of strange behaviours without throwing any error. 
 
 - [ ] Describe a life-cycle event in React?
 
-
+A life-cycle event is composed of three parts. The first is when the component is mounted, the second one happens every time the component is updated and finally it ends when the component is unmounted. React has some built in methods that permit us to “do stuff”  right at the beginning or the end of every life-cycle.
 
 - [ ] Explain the details of a Higher Order Component?
 
-
+An High Order Component is conceptually similar to a High Order Function in vanilla JS. As an high order function takes an other function (a callback) as an argument, HOC takes a React Component (that is “under the hood” a function itself) and then it returns a Component itself. This is really useful to  use “upgraded” Components without the need to touch the original components nor to have to repeat yourself in your code.
 
 - [ ] What are three different ways to style components in React? Explain some of the benefits of each.
 
-
+You could style directly injecting inline style to your DOM, but is not really raccomended. While you can do it “out of the box” without the need to install any dependencies, it gives all the problems that usually gives you inlining your style in your HTML.
+Another way is to use reactStrap a components library Bootstrap. This has some advantages respect to the previous method. It has pre-built components that you can use directly, just after you import them, but has cons too, it’s really big, and because on how is working it contaminate your css all over the place, so you will need to be careful about that.
+The third (and possibly the best)  way to do it is using a library called styled-components. The pros of using this library are a lot, that goes from cleaner and more organised code, truly reusable components, and so on.. But one of the coolest stuff it is that, because styled components are functions, you can pass props to them and have styles dynamically generated. 
 
 
 ## Project Setup
