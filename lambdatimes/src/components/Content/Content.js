@@ -26,7 +26,9 @@ export default class Content extends React.Component {
 
   changeSelected = tab => {
     // this function should take in the tab and update the state with the new tab.
-    
+    this.setState({
+      selected: tab,
+    })
   };
 
   filterCards = () => {
