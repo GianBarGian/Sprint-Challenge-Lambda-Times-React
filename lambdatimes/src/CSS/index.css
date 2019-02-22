@@ -191,7 +191,7 @@ body {
   letter-spacing: 1px;
   font-weight: bold;
 } */
-.tabs .topics .tab {
+/* .tabs .topics .tab {
   display: flex;
   justify-content: none;
   align-items: center;
@@ -212,7 +212,7 @@ body {
   background-color: #fff;
   color: #333;
   border: 2px solid #333;
-}
+} */
 .cards-container {
   display: flex;
   justify-content: space-evenly;
